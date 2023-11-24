@@ -5,17 +5,21 @@
 
 /** @type {import('jest').Config} */
 
+
 module.exports = {
   transform: {
     "^.+\\.js$": "babel-jest",
   },
-  // testEnvironment: "jsdom",
-  // testEnvironment: 'jest-environment-jsdom',
-  moduleFileExtensions: ["js", "jsx", "json"],
-  setupFilesAfterEnv: ["./jest.setup.js"],
+  moduleNameMapper: {
+    "\\.(css|less)$": "<rootDir>/styleMock.js"
+  },
+  moduleFileExtensions: ["js", "jsx", "json", "css"],
+  // setupFilesAfterEnv: ["./jest.setup.js"],
+ 
 };
 
 const config = {
+  
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 

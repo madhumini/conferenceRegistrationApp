@@ -5,8 +5,8 @@ import Dashboard from "../src/components/Dashboard";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom/matchers";
 import "@testing-library/jest-dom";
-import { toBeInTheDocument } from "@testing-library/jest-dom/matchers";
 import GroupRegistrationDetailsView from "../src/components/GroupRegistrationDetailsView";
+// jest.mock("./index.css");
 
 test("renders RegistrationForm component", () => {
   render(
