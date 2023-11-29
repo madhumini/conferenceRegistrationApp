@@ -1,8 +1,8 @@
 const request = require("supertest");
-const app = require("../../backend"); // Update the path accordingly
+const app = require("../../backend"); 
 
 describe("Registration Endpoints", () => {
-  let RegistrationId; // To store the ID of the single registration for later use
+  let RegistrationId; 
 
   it("should register a single attendee", async () => {
     const response = await request(app).post("/api/auth/register").send({
@@ -49,7 +49,7 @@ describe("Registration Endpoints", () => {
       `/api/user/getRegistrationDetails/${RegistrationId}`
     );
 
-    expect(response.status).toBe(200); // Expecting a 404 because the single registration is not a group
+    expect(response.status).toBe(200);
   });
 });
 

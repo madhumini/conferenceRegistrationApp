@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom/matchers";
 import "@testing-library/jest-dom";
 import GroupRegistrationDetailsView from "../src/components/GroupRegistrationDetailsView";
-// jest.mock("./index.css");
 
 test("renders RegistrationForm component", () => {
   render(
@@ -31,8 +30,7 @@ test("submits single attendee registration form", () => {
   fireEvent.change(nameInput, { target: { value: "John Doe" } });
   fireEvent.change(emailInput, { target: { value: "john.doe@example.com" } });
   fireEvent.click(submitButton);
-
-  // Your test assertions for the submission of a single attendee registration form go here
+ 
 });
 
 test("submits group registration form", async () => {
@@ -66,7 +64,6 @@ test("submits group registration form", async () => {
   });
   fireEvent.click(submitButton);
 
-  // Your test assertions for the submission of a group registration form go here
 });
 
 test("renders Dashboard component", () => {
